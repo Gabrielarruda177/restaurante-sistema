@@ -1,59 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🍽️ Sistema de Gestão para Restaurantes (Autoatendimento por QR Code)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+> Plataforma completa desenvolvida para gerenciar todas as operações de um restaurante de forma integrada, oferecendo autonomia para os clientes na mesa e controle total em tempo real para a administração e a cozinha.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🛠️ Tecnologias Utilizadas
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Este projeto foi estruturado com foco em performance, controle de fluxo e separação de permissões por perfil de usuário:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+*   **Backend:** PHP / Laravel
+*   **Banco de Dados:** MySQL
+*   **Interface:** Tailwind CSS / Blade
+*   **Controle de Versão:** Git & GitHub
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## 💡 Sobre o Projeto
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+O sistema automatiza o ecossistema interno e externo de um estabelecimento gastronômico. Ele elimina a fila de espera para atendimento tradicional ao permitir que o próprio cliente faça o pedido direto da mesa via QR Code, integrando instantaneamente o salão, a cozinha e o controle administrativo/financeiro.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 👥 Perfis de Acesso (Roles)
 
-### Premium Partners
+O sistema possui uma arquitetura baseada em múltiplos papéis, garantindo que cada usuário acesse apenas o que é necessário para a sua função:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+*   👨‍💼 **Administrador:** Visão geral do negócio, relatórios financeiros, controle de estoque (entradas, saídas e insumos), gerenciamento completo de funcionários, cardápio e auditoria de caixa.
+*   🤵 **Garçom:** Apoio ao salão, acompanhamento de mesas ativas e suporte aos clientes caso seja necessário atendimento presencial.
+*   🍳 **Cozinha (KDS - Kitchen Display System):** Painel em tempo real para os cozinheiros visualizarem os pedidos que chegam do salão/mesas, organizados por ordem de prioridade e com status de preparo.
+*   📱 **Cliente (Mesa via QR Code):** Interface mobile responsiva onde o cliente lê o código da mesa, visualiza o cardápio digital, realiza e acompanha o status do seu próprio pedido sem depender de intermediários.
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## ⚙️ Principais Módulos e Funcionalidades
 
-## Code of Conduct
+*   📊 **Painel Administrativo & Estoque:** Métricas de vendas diárias, fluxo de caixa, produtos mais vendidos e baixa automática de insumos e estoque gerenciada pelo próprio painel do admin.
+*   📲 **Cardápio Digital por QR Code:** Cada mesa possui um QR Code único vinculado; o cliente acessa instantaneamente pelo celular para pedir e acompanhar a comanda.
+*   🛎️ **Fluxo de Pedidos em Tempo Real:** Comunicação instantânea entre o pedido feito pelo cliente na mesa e a tela de exibição da cozinha.
+*   🍔 **Gestão de Produtos:** Cadastro flexível de categorias, pratos, ingredientes, adicionais e preços.
+*   🔒 **Controle de Acessos e Segurança:** Autenticação robusta e proteção contra acessos indevidos a rotas administrativas usando os recursos nativos do Laravel.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 📈 Arquitetura
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+O sistema foi estruturado seguindo o padrão **MVC (Model-View-Controller)** do Laravel, garantindo código limpo, fácil manutenção e escalabilidade para adicionar novas funções, caixas ou terminais de atendimento.
